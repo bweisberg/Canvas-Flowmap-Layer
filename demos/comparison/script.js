@@ -64,9 +64,9 @@ require([
 
     map.addLayers([oneToManyLayer, manyToOneLayer, oneToOneLayer]);
 
-    createGraphicsFromCsv('../csv-data/Flowmap_Cities_one_to_many.csv', oneToManyLayer);
-    createGraphicsFromCsv('../csv-data/Flowmap_Cities_many_to_one.csv', manyToOneLayer);
-    createGraphicsFromCsv('../csv-data/Flowmap_Cities_one_to_one.csv', oneToOneLayer);
+    createGraphicsFromCsv('../csv-data/Half_Marathon_results.csv', oneToManyLayer);
+    createGraphicsFromCsv('../csv-data/Half_Marathon_results.csv', manyToOneLayer);
+    createGraphicsFromCsv('../csv-data/Half_Marathon_results.csv', oneToOneLayer);
 
     // here we use Papa Parse to load and read the CSV data
     // we could have also used another library like D3js to do the same
@@ -136,9 +136,9 @@ require([
 
       // automatically select some graphics for path display to demonstrate the flowmap functionality,
       // without the user having to first click on the layer
-      oneToManyLayer.selectGraphicsForPathDisplayById('s_city_id', 562, true, 'SELECTION_NEW');
-      manyToOneLayer.selectGraphicsForPathDisplayById('e_city_id', 562, false, 'SELECTION_NEW');
-      oneToOneLayer.selectGraphicsForPathDisplayById('e_city_id', 562, false, 'SELECTION_NEW');
+      oneToManyLayer.selectGraphicsForPathDisplayById('redlands_id', 1, true, 'SELECTION_NEW');
+      manyToOneLayer.selectGraphicsForPathDisplayById('redlands_id', 1, false, 'SELECTION_NEW');
+      oneToOneLayer.selectGraphicsForPathDisplayById('redlands_id', 1, false, 'SELECTION_NEW');
     }, 3000);
 
     // establish actions for form elements in the controls card

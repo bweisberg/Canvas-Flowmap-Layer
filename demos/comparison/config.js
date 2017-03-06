@@ -4,7 +4,7 @@ define([], function() {
     // required information to inform the CanvasFlowmapLayer which origin and destination attributes to rely on
     originAndDestinationFieldIds: {
       // use this origin attribute to help filter unique graphics when clicking
-      originUniqueIdField: 's_city_id',
+      originUniqueIdField: 'City',
       originGeometry: {
         x: 's_lon',
         y: 's_lat',
@@ -14,10 +14,10 @@ define([], function() {
       },
       // use this destination attribute to refrain from re-drawing identical destination graphics
       // i.e. only show 1 destination per each unique entry in the csv in the canvas
-      destinationUniqueIdField: 'e_city_id',
+      destinationUniqueIdField: 'redlands_id',
       destinationGeometry: {
-        x: 'e_lon',
-        y: 'e_lat',
+        x: 'redlands_x',
+        y: 'redlands_y',
         spatialReference: {
           wkid: 4326
         }
