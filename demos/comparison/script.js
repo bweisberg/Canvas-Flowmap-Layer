@@ -64,8 +64,8 @@ require([
 
     map.addLayers([oneToManyLayer, manyToOneLayer, oneToOneLayer]);
 
-    createGraphicsFromCsv('../csv-data/Half_Marathon_results.csv', oneToManyLayer);
-    createGraphicsFromCsv('../csv-data/Half_Marathon_results.csv', manyToOneLayer);
+    createGraphicsFromCsv('../csv-data/FiveK.csv', oneToManyLayer);
+    createGraphicsFromCsv('../csv-data/TenK.csv', manyToOneLayer);
     createGraphicsFromCsv('../csv-data/Half_Marathon_results.csv', oneToOneLayer);
 
     // here we use Papa Parse to load and read the CSV data
@@ -136,7 +136,7 @@ require([
 
       // automatically select some graphics for path display to demonstrate the flowmap functionality,
       // without the user having to first click on the layer
-      oneToManyLayer.selectGraphicsForPathDisplayById('redlands_id', 1, true, 'SELECTION_NEW');
+      oneToManyLayer.selectGraphicsForPathDisplayById('redlands_id', 1, false, 'SELECTION_NEW');
       manyToOneLayer.selectGraphicsForPathDisplayById('redlands_id', 1, false, 'SELECTION_NEW');
       oneToOneLayer.selectGraphicsForPathDisplayById('redlands_id', 1, false, 'SELECTION_NEW');
     }, 3000);
