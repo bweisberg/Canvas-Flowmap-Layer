@@ -23,8 +23,8 @@ require([
 
   var map = new Map('map', {
     basemap: 'dark-gray-vector',
-    center: [22, 14],
-    zoom: 2
+    center: [-117, 34],
+    zoom: 3
   });
 
   map.on('load', function() {
